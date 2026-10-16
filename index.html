@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f8fc">
+
+  <title>PLAYVERSE — Dunia Game 3D</title>
+
+  <meta
+    name="description"
+    content="Jelajahi dunia game 3D, mainkan game browser, dan temukan petualangan baru di PLAYVERSE."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Background decoration -->
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <a class="brand" href="#home" aria-label="PLAYVERSE Home">
+      <span class="brand-icon">P</span>
+      <span>PLAY<span class="brand-accent">VERSE</span></span>
+    </a>
+
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a class="nav-link active" href="#home">Beranda</a>
+      <a class="nav-link" href="#games">Game</a>
+      <a class="nav-link" href="#categories">Kategori</a>
+      <a class="nav-link" href="#about">Tentang</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button
+        class="icon-button"
+        id="search-toggle"
+        aria-label="Buka pencarian"
+        type="button"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m16 16 4 4"></path>
+        </svg>
+      </button>
+
+      <a class="button button-dark nav-play" href="#games">
+        Mulai Bermain <span>↗</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        type="button"
+        aria-label="Buka menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Search panel -->
+  <section class="search-panel" id="search-panel" hidden>
+    <label for="game-search">Cari game favoritmu</label>
+    <input
+      id="game-search"
+      type="search"
+      placeholder="Cari game..."
+      autocomplete="off"
+    >
+  </section>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero section-container" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span class="status-dot"></span>
+          <span>YOUR NEXT GAMING DESTINATION</span>
+        </div>
+
+        <h1>
+          Bukan sekadar
+          <span class="heading-highlight">game.</span>
+          <br>
+          Ini duniamu.
+        </h1>
+
+        <p class="hero-description">
+          Temukan petualangan baru, jelajahi dunia 3D, dan
+          mainkan game browser favoritmu. Semua dalam satu tempat.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#games" class="button button-primary">
+            <span>Jelajahi Game</span>
+            <span class="button-arrow">↗</span>
+          </a>
+
+          <a href="#featured" class="button button-light">
+            <span class="play-symbol">▶</span>
+            Game unggulan
+          </a>
+        </div>
+
+        <div class="hero-proof">
+          <div class="avatar-stack" aria-hidden="true">
+            <span>🎮</span>
+            <span>👾</span>
+            <span>🚀</span>
+            <span>✨</span>
+          </div>
+
+          <div class="proof-copy">
+            <strong>Explore. Play. Repeat.</strong>
+            <span>Petualangan dimulai di sini.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D game showcase -->
+      <div class="hero-visual" id="featured">
+        <div class="visual-orbit orbit-one"></div>
+        <div class="visual-orbit orbit-two"></div>
+
+        <div class="floating-tag tag-top">
+          <span class="tag-icon">✦</span>
+          <span>
+            <strong>Next-level fun</strong>
+            <small>Pengalaman baru</small>
+          </span>
+        </div>
+
+        <div class="three-stage" id="three-stage">
+          <div class="stage-fallback" id="stage-fallback">
+            <div class="fallback-platform">
+              <div class="fallback-cube">
+                <span></span>
+              </div>
+            </div>
+            <div class="fallback-orb orb-purple"></div>
+            <div class="fallback-orb orb-orange"></div>
+          </div>
+          <!-- Three.js canvas dibuat oleh src/game.js -->
+        </div>
+
+        <div class="floating-tag tag-bottom">
+          <span class="online-indicator"></span>
+          <span>
+            <strong>3D Universe</strong>
+            <small>Explore the impossible</small>
+          </span>
+        </div>
+
+        <div class="visual-caption">
+          <span class="caption-line"></span>
+          <span>IMAGINATION HAS NO LIMITS</span>
+        </div>
+      </div>
+
+      <div class="hero-bottom-label">
+        <span>SCROLL TO EXPLORE</span>
+        <span class="scroll-line"></span>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-strip section-container" aria-label="Fitur website">
+      <div class="stat-item">
+        <span class="stat-icon stat-blue">◈</span>
+        <div>
+          <strong>3D Experience</strong>
+          <span>Visual interaktif</span>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-icon stat-purple">✧</span>
+        <div>
+          <strong>Browser Gaming</strong>
+          <span>Langsung dari web</span>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-icon stat-orange">⚡</span>
+        <div>
+          <strong>Made for Fun</strong>
+          <span>Petualangan tanpa batas</span>
+        </div>
+      </div>
+
+      <div class="stat-item">
+        <span class="stat-icon stat-green">⌘</span>
+        <div>
+          <strong>All in One</strong>
+          <span>Satu dunia game</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Games -->
+    <section class="games-section section-container" id="games">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-mark">✳</span>
+            THE GAME LIBRARY
+          </div>
+
+          <h2>Temukan game <span>favoritmu.</span></h2>
+
+          <p>
+            Pilih petualanganmu berikutnya dari koleksi game pilihan.
+          </p>
+        </div>
+
+        <a class="text-link" href="#categories">
+          Lihat kategori <span>↗</span>
+        </a>
+      </div>
+
+      <div class="filter-bar" id="categories">
+        <div class="filter-list" role="group" aria-label="Filter kategori">
+          <button class="filter-chip active" data-category="all" type="button">
+            Semua game
+          </button>
+          <button class="filter-chip" data-category="adventure" type="button">
+            Petualangan
+          </button>
+          <button class="filter-chip" data-category="racing" type="button">
+            Balapan
+          </button>
+          <button class="filter-chip" data-category="action" type="button">
+            Aksi
+          </button>
+          <button class="filter-chip" data-category="puzzle" type="button">
+            Puzzle
+          </button>
+        </div>
+
+        <span class="game-count" id="game-count">06 GAME</span>
+      </div>
+
+      <div class="game-grid" id="game-grid">
+        <!-- Game 1 -->
+        <article
+          class="game-card"
+          data-category="adventure"
+          data-search="sky islands adventure platformer"
+        >
+          <a class="game-art art-sky" href="#play" data-game="sky-islands">
+            <span class="art-label">01 / ADVENTURE</span>
+            <div class="sky-scene" aria-hidden="true">
+              <span class="sky-sun"></span>
+              <span class="sky-cloud cloud-one"></span>
+              <span class="sky-cloud cloud-two"></span>
+              <span class="sky-island island-one"></span>
+              <span class="sky-island island-two"></span>
+              <span class="sky-player">◆</span>
+            </div>
+            <span class="art-play">▶</span>
+          </a>
+
+          <div class="game-info">
+            <div>
+              <h3>Sky Islands</h3>
+              <p>Jelajahi pulau di atas awan.</p>
+            </div>
+            <span class="game-type">3D</span>
+          </div>
+          <div class="game-meta">
+            <span>◈ Petualangan</span>
+            <span class="meta-status">FEATURED</span>
+          </div>
+        </article>
+
+        <!-- Game 2 -->
+        <article
+          class="game-card"
+          data-category="racing"
+          data-search="neon rush racing mobil"
+        >
+          <a class="game-art art-racing" href="#play" data-game="neon-rush">
+            <span class="art-label">02 / RACING</span>
+            <div class="racing-scene" aria-hidden="true">
+              <span class="road-line"></span>
+              <span class="racing-car">▰</span>
+              <span class="racing-light light-one"></span>
+              <span class="racing-light light-two"></span>
+            </div>
+            <span class="art-play">▶</span>
+          </a>
+
+          <div class="game-info">
+            <div>
+              <h3>Neon Rush</h3>
+              <p>Taklukkan jalanan futuristik.</p>
+            </div>
+            <span class="game-type">3D</span>
+          </div>
+          <div class="game-meta">
+            <span>◈ Balapan</span>
+            <span>Arcade</span>
+          </div>
+        </article>
+
+        <!-- Game 3 -->
+        <article
+          class="game-card"
+          data-category="action"
+          data-search="cube combat action arena"
+        >
+          <a class="game-art art-combat" href="#play" data-game="cube-combat">
+            <span class="art-label">03 / ACTION</span>
+            <div class="combat-scene" aria-hidden="true">
+              <span class="combat-ring ring-one"></span>
+              <span class="combat-ring ring-two"></span>
+              <span class="combat-cube">✦</span>
+            </div>
+            <span class="art-play">▶</span>
+          </a>
+
+          <div class="game-info">
+            <div>
+              <h3>Cube Combat</h3>
+              <p>Bertahan di arena digital.</p>
+            </div>
+            <span class="game-type">3D</span>
+          </div>
+          <div class="game-meta">
+            <span>◈ Aksi</span>
+            <span>Arcade</span>
+          </div>
+        </article>
+
+        <!-- Game 4 -->
+        <article
+          class="game-card"
+          data-category="puzzle"
+          data-search="mind blocks puzzle logic"
+        >
+          <a class="game-art art-puzzle" href="#play" data-game="mind-blocks">
+            <span class="art-label">04 / PUZZLE</span>
+            <div class="puzzle-scene" aria-hidden="true">
+              <span class="puzzle-block block-one">+</span>
+              <span class="puzzle-block block-two">◇</span>
+              <span class="puzzle-block block-three">○</span>
+              <span class="puzzle-block block-four">×</span>
+            </div>
+            <span class="art-play">▶</span>
+          </a>
+
+          <div class="game-info">
+            <div>
+              <h3>Mind Blocks</h3>
+              <p>Uji logika dan strategi.</p>
+            </div>
+            <span class="game-type">2D</span>
+          </div>
+          <div class="game-meta">
+            <span>◈ Puzzle</span>
+            <span>Logic</span>
+          </div>
+        </article>
+
+        <!-- Game 5 -->
+        <article
+          class="game-card"
+          data-category="adventure"
+          data-search="cosmic explorer space exploration"
+        >
+          <a class="game-art art-space" href="#play" data-game="cosmic-explorer">
+            <span class="art-label">05 / EXPLORATION</span>
+            <div class="space-scene" aria-hidden="true">
+              <span class="space-planet"></span>
+              <span class="space-ring"></span>
+              <span class="space-star star-one">✦</span>
+              <span class="space-star star-two">✧</span>
+              <span class="space-ship">▲</span>
+            </div>
+            <span class="art-play">▶</span>
+          </a>
+
+          <div class="game-info">
+            <div>
+              <h3>Cosmic Explorer</h3>
+              <p>Temukan rahasia luar angkasa.</p>
+            </div>
+            <span class="game-type">3D</span>
+          </div>
+          <div class="game-meta">
+            <span>◈ Eksplorasi</span>
+            <span>Space</span>
+          </div>
+        </article>
+
+        <!-- Game 6 -->
+        <article
+          class="game-card"
+          data-category="racing"
+          data-search="street rush runner endless city"
+        >
+          <a class="game-art art-street" href="#play" data-game="street-rush">
+            <span class="art-label">06 / RUNNER</span>
+            <div class="street-scene" aria-hidden="true">
+              <span class="city-building building-one"></span>
+              <span class="city-building building-two"></span>
+              <span class="city-road"></span>
+              <span class="street-runner">◆</span>
+            </div>
+            <span class="art-play">▶</span>
+          </a>
+
+          <div class="game-info">
+            <div>
+              <h3>Street Rush</h3>
+              <p>Hindari rintangan dan raih skor.</p>
+            </div>
+            <span class="game-type">2D</span>
+          </div>
+          <div class="game-meta">
+            <span>◈ Endless Runner</span>
+            <span>Arcade</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="empty-state" id="empty-state" hidden>
+        <span>⌕</span>
+        <h3>Game tidak ditemukan</h3>
+        <p>Coba kata kunci atau kategori lainnya.</p>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section section-container" id="about">
+      <div class="cta-panel">
+        <div class="cta-orb cta-orb-one"></div>
+        <div class="cta-orb cta-orb-two"></div>
+
+        <div class="cta-content">
+          <div class="eyebrow cta-eyebrow">
+            <span>✦</span> READY PLAYER ONE?
+          </div>
+
+          <h2>Dunia berikutnya<br>menunggumu.</h2>
+
+          <p>
+            Pilih game, mulai petualangan, dan ciptakan skor terbaikmu.
+          </p>
+
+          <a href="#games" class="button button-white">
+            Mulai petualangan <span>↗</span>
+          </a>
+        </div>
+
+        <div class="cta-decoration" aria-hidden="true">
+          <div class="cta-cube cube-large"></div>
+          <div class="cta-cube cube-small"></div>
+          <span class="cta-star">✳</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Game modal: actual gameplay will be connected later -->
+  <div
+    class="game-modal"
+    id="game-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    hidden
+  >
+    <div class="modal-panel">
+      <button
+        class="modal-close"
+        id="modal-close"
+        type="button"
+        aria-label="Tutup game"
+      >
+        ×
+      </button>
+
+      <div class="modal-icon">🎮</div>
+      <div class="eyebrow">PLAYVERSE ARCADE</div>
+
+      <h2 id="modal-title">Game pilihanmu</h2>
+
+      <p id="modal-description">
+        Siapkan dirimu untuk petualangan berikutnya.
+      </p>
+
+      <div class="modal-notice">
+        <span>✦</span>
+        Game ini perlu dihubungkan ke modul gameplay agar bisa dimainkan.
+      </div>
+
+      <button class="button button-primary" id="modal-ok" type="button">
+        Kembali ke koleksi <span>↗</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer section-container">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-icon">P</span>
+      <span>PLAY<span class="brand-accent">VERSE</span></span>
+    </a>
+
+    <p>Tempat petualangan digital dimulai.</p>
+
+    <div class="footer-right">
+      <span>DESIGNED FOR EXPLORERS</span>
+      <a href="#home">Kembali ke atas ↑</a>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="current-year">2026</span> PLAYVERSE</span>
+      <span>Built for the love of gaming.</span>
+    </div>
+  </footer>
+
+  <script type="module" src="src/game.js"></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
