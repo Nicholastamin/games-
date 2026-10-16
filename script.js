@@ -206,12 +206,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+
+  // Game card clicks
   $$("[data-game]").forEach((link) => {
     link.addEventListener("click", (event) => {
       event.preventDefault();
       openGameModal(link.dataset.game);
     });
   });
+
 
   modalClose.addEventListener("click", closeGameModal);
   modalOkay.addEventListener("click", closeGameModal);
